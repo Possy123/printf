@@ -1,4 +1,7 @@
 # Printf group project
+### contributors
+	Olamiposi Fasina
+	Emmanuel Ajibokun
 
 ## Writing a printf function.
 
