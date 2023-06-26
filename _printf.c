@@ -28,6 +28,9 @@ int _printf(const char *format, ...)
 		case '%':
 			_putchar('%');
 			break;
+		case 'd':
+			printstring(va_arg(prints, int);
+			break;
 		default:
 			break;
 	}
