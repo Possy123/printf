@@ -16,33 +16,35 @@ int _printf(const char *format, ...)
 		return (-1);
 	while (*format != '\0')
 	{
-	if (*format == '%')
+		if( *format == '%')
 	{
 		format++;/*move to the next character after %*/
 	switch (*format)
 	{
 		case 'c':
-		       printchar(va_arg(prints, int));
+		       count += printchar(va_arg(prints, int));
 			break;
 		case 's':
-			printstring(va_arg(prints, char *));
+			count += printstring(va_arg(prints, char *));
 			break;
 		case '%':
-			_putchar('%');
+			count += _putchar('%');
 			break;
 		case 'd':
 		case 'i':
-			print_int(va_arg(prints, int));
+			count += print_int(va_arg(prints, int));
 			break;
 		default:
+			_putchar(*format);
+			count++;
 			break;
 	}
 	}
-	else
-	{
-		_putchar(*format);/* print ordinary character*/
-	}
-	count++;
+		else
+		{
+			_putchar(*format);
+			count++;
+		}
 	format++;
 	}
 	va_end(prints);

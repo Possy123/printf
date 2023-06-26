@@ -17,15 +17,18 @@ int printchar(char c)
  * printstring - to print a string
  * @str: string
  */
-void printstring(char *str)/*to print a string*/
+int printstring(char *str)/*to print a string*/
 {
 	int i = 0;
+	int count = 0;
 
 	while (str[i] != '\0')
 	{
 		_putchar(str[i]);
 		i++;
+		count++;
 	}
+	return (count);
 }
 
 /**
@@ -34,7 +37,7 @@ void printstring(char *str)/*to print a string*/
  * Return: void
  */
 
-void print_int(int n)
+int print_int(int n)
 {
 	char int_to_str[20];
 	int i = 0;
@@ -46,4 +49,5 @@ void print_int(int n)
 		_putchar(int_to_str[i]);
 		i++;
 	}
+	return (0);
 }
