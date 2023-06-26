@@ -20,10 +20,10 @@ int _printf(const char *format, ...)
 	switch (*format)
 	{
 		case 'c':
-		       printchar(va_arg(prints, int);
+		       printchar(va_arg(prints, int));
 			break;
 		case 's':
-			printstring(va_arg(prints, char *);
+			printstring(va_arg(prints, char *));
 			break;
 		case '%':
 			_putchar('%');
