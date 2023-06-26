@@ -29,7 +29,10 @@ int _printf(const char *format, ...)
 			_putchar('%');
 			break;
 		case 'd':
-			printstring(va_arg(prints, int);
+			print_int(va_arg(prints, int));
+			break;
+		case 'i':
+			print_int(va_arg(prints, int));
 			break;
 		default:
 			break;
