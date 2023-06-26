@@ -16,7 +16,7 @@ int _printf(const char *format, ...)
 		return (-1);
 	while (*format != '\0')
 	{
-		if( *format == '%')
+		if (*format == '%')
 	{
 		format++;/*move to the next character after %*/
 	switch (*format)
@@ -35,15 +35,13 @@ int _printf(const char *format, ...)
 			count += print_int(va_arg(prints, int));
 			break;
 		default:
-			_putchar(*format);
-			count++;
+			count += _putchar(*format);
 			break;
 	}
 	}
 		else
 		{
-			_putchar(*format);
-			count++;
+			count += _putchar(*format);
 		}
 	format++;
 	}

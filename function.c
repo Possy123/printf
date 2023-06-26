@@ -16,6 +16,7 @@ int printchar(char c)
 /**
  * printstring - to print a string
  * @str: string
+ * Return: count
  */
 int printstring(char *str)/*to print a string*/
 {
