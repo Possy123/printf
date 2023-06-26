@@ -4,8 +4,9 @@
 /**
  * _putchar - print a character
  * @c: the character to print
+ *Return: the character
  */
 int _putchar(int c)
 {
-	return(write(1, &c, 1));
-}	
+	return (write(1, &c, 1));
+}
