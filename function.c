@@ -36,14 +36,32 @@ void printstring(char *str)/*to print a string*/
 
 void print_int(int n)
 {
-	char int_to_str[20];
-	int i = 0;
+        int digit[10];
+        int count = 0;
+        int i = 0;
+	int j;
 
-	sprintf(int_to_str, "%d", n);
-
-	while (int_to_str[i] != '\0')
+        if (n == 0)
+        {
+                _putchar('0');
+                return;
+        }
+        if (n < 0)
+        {
+                _putchar('-');
+                n = -n;
+		count++;
+        }
+        while(n > 0)
+        {
+                digit[i] = '0' + n % 10;
+               n /= 10;
+	       i++;
+        }
+        for (j = i - 1; j >= 0; j--)
 	{
-		_putchar(int_to_str[i]);
-		i++;
+		_putchar(digit[j]);
 	}
+	count++;
 }
+
