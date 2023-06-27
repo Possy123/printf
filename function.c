@@ -42,13 +42,24 @@ int print_int(int n)
 {
 	char int_to_str[20];
 	int i = 0;
-
-	sprintf(int_to_str, "%d", n);
-
-	while (int_to_str[i] != '\0')
+	int j;
+	
+	if (n == 0)
+		return (0);
+       	if (n < 0)
 	{
-		_putchar(int_to_str[i]);
-		i++;
+		_putchar('-');
+		n = -n;
 	}
-	return (0);
+	while (n > 0)
+	{
+		int_to_str[i] = '0' + n % 10;
+		i++;
+		n /= 10;
+	}
+		for (j = i - 1; j >= 0; j--)
+		{
+			_putchar(int_to_str[j]);
+		}
+	return (i);
 }
