@@ -36,6 +36,8 @@ int _printf(const char *format, ...)
 		case 'b':
 			count += printbinary(va_arg(prints, unsigned int));
 			break;
+		case 'u':
+			count += printDec(va_arg(prints, unsigned int));
 		default:
 			break;
 	}
