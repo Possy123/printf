@@ -1,5 +1,6 @@
 #include <stdarg.h>
 #include "main.h"
+#include <unistd.h>
 /**
  * _printf - function name
  * @format: character string
@@ -27,7 +28,7 @@ int _printf(const char *format, ...)
 			count += printstring(va_arg(prints, char *));
 			break;
 		case '%':
-			count += _putchar('%');
+			count += write(1, "%", 1);
 			break;
 		case 'd':
 		case 'i':
@@ -53,7 +54,7 @@ int _printf(const char *format, ...)
 	}
 		else
 		{
-			count += _putchar(*format);
+			count += write(1, format, 1);
 		}
 	format++;
 	}
