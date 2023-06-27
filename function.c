@@ -53,13 +53,16 @@ int print_int(int n)
 	}
 	while (n > 0)
 	{
-		int_to_str[i] = '0' + n % 10;
+		int_to_str[i] = '0' + n % 10;/**
+					      * convert number to string from
+					       *the rightmost digit
+					       */
 		i++;
 		n /= 10;
 	}
 		for (j = i - 1; j >= 0; j--)
 		{
-			_putchar(int_to_str[j]);
+			_putchar(int_to_str[j]);/*to print in the right order*/
 		}
 	return (i);
 }
