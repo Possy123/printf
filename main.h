@@ -9,5 +9,6 @@ int  print_int(int n);
 int printbinary(unsigned int num);
 int printDec(unsigned int num);
 int print_oct(unsigned int num);
+int print_hex(unsigned int num);
 
 #endif /*MAIN_H*/
