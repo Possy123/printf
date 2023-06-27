@@ -1,6 +1,5 @@
 #include <stdarg.h>
 #include "main.h"
-
 /**
  * _printf - function name
  * @format: character string
@@ -34,8 +33,10 @@ int _printf(const char *format, ...)
 		case 'i':
 			count += print_int(va_arg(prints, int));
 			break;
+		case 'b':
+			count += printbinary(va_arg(prints, unsigned int));
+			break;
 		default:
-			count += _putchar(*format);
 			break;
 	}
 	}
