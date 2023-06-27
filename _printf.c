@@ -38,6 +38,10 @@ int _printf(const char *format, ...)
 			break;
 		case 'u':
 			count += printDec(va_arg(prints, unsigned int));
+			break;
+		case 'o':
+			count += print_oct(va_arg(prints, unsigned int));
+			break;
 		default:
 			break;
 	}

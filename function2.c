@@ -36,21 +36,42 @@ int printbinary(unsigned int num)
  */
 int printDec(unsigned int num)
 {
-	char dec_to_str[32];
-	int i = 0;
+	char dec[32];
+	int index = 0;
 	int j;
 
 	if (num == 0)
 		return (0);
 	while (num > 0)
 	{
-		dec_to_str[i] = '0' + num % 10;
-		i++;
+		dec[index] = '0' + num % 10;
+		index++;
 		num /= 10;
 	}
-	for (j = i - 1; j >= 0; j--)
+	for (j = index - 1; j >= 0; j--)
 	{
-		_putchar(dec_to_str[j]);
+		_putchar(dec[j]);
+	}
+	return (index);
+}
+
+int print_oct(unsigned int num)
+{
+	char oct[32];
+	int a = 0;
+	int i;
+
+	if (num == 0)
+		return (0);
+	while (num > 0)
+	{
+		oct[a] = '0' + num % 8;
+		a++;
+		num /= 8;
+	}
+	for (i = a - 1; i >= 0; i--)
+	{
+		_putchar(oct[i]);
 	}
 	return (i);
-}				
+}
