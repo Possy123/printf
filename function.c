@@ -43,10 +43,10 @@ int print_int(int n)
 	char int_to_str[20];
 	int i = 0;
 	int j;
-	
+
 	if (n == 0)
 		return (0);
-       	if (n < 0)
+	if (n < 0
 	{
 		_putchar('-');
 		n = -n;
