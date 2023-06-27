@@ -42,6 +42,11 @@ int _printf(const char *format, ...)
 		case 'o':
 			count += print_oct(va_arg(prints, unsigned int));
 			break;
+		case 'x':
+			count += print_low_hex(va_arg(prints, unsigned int));
+			break;
+		case 'X':
+			count += print_cap_hex(va_arg(prints, unsigned int));
 		default:
 			break;
 	}

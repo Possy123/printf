@@ -55,6 +55,12 @@ int printDec(unsigned int num)
 	return (index);
 }
 
+/**
+ * print_oct - print octadecimal string to std output
+ * @num: integer
+ * Return: integer
+ */
+
 int print_oct(unsigned int num)
 {
 	char oct[32];
@@ -73,5 +79,63 @@ int print_oct(unsigned int num)
 	{
 		_putchar(oct[i]);
 	}
+	return (i);
+}
+
+/**
+ * print_cap_hex - print hexadecimal string
+ * @num: integer
+ * Return: 0;
+ */
+
+int print_cap_hex(unsigned int num)
+{
+	char hex[32];
+	int i = 0;
+	int j;
+
+	if (num == 0)
+		return (0);
+	while (num > 0)
+	{
+		if (num % 16 < 10)
+			hex[i] = '0' + num % 16;
+		else
+			hex[i] = 'A' + ((num % 16) - 10);
+		i++;
+		num /= 16;
+	}
+	for (j = i - 1; j >= 0; j--)
+		_putchar(hex[j]);
+
+	return (i);
+}
+
+/**
+ * print_low_hex - print hexadecimal string
+ * @num: integer
+ * Return: integer
+ */
+
+int print_low_hex(unsigned int num)
+{
+	char hex[32];
+	int i = 0;
+	int j;
+
+	if (num == 0)
+		return (0);
+	while (num > 0)
+	{
+		if (num % 16 < 10)
+			hex[i] = '0' + num % 16;
+		else
+			hex[i] = 'a' + ((num % 16) - 10);
+		i++;
+		num /= 16;
+	}
+	for (j = i - 1; j >= 0; j--)
+		_putchar(hex[j]);
+
 	return (i);
 }
