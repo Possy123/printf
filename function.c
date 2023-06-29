@@ -78,7 +78,7 @@ int print_special_string(char *Str)
 {
 	int i = 0;
 	int  len = 0;
-	unsigned int St;
+	unsigned char St;
 
 	if (Str[i] == '\0')
 		Str = "(null)";
