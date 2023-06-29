@@ -48,6 +48,10 @@ int _printf(const char *format, ...)
 			break;
 		case 'X':
 			count += print_cap_hex(va_arg(prints, unsigned int));
+			break;
+		case 'S':
+			count += print_special_string(va_arg(prints, char *));
+			break;
 		default:
 			break;
 	}
