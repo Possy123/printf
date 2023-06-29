@@ -25,7 +25,7 @@ int printstring(char *str)/*to print a string*/
 	int count = 0;
 
 	if (str[i] == '\0')
-		return (-1) ;
+		return (-1);
 	while (str[i] != '\0')
 	{
 		_putchar(str[i]);
@@ -85,7 +85,7 @@ int print_special_string(char *Str)
 	for (; Str[i] != '\0'; i++)
 	{
 		St = Str[i];
-		if(Str[i] < 32 || Str[i] >= 127)
+		if (Str[i] < 32 || Str[i] >= 127)
 		{
 			_putchar('\\');
 			_putchar('x');
