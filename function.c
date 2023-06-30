@@ -89,7 +89,7 @@ int print_special_string(char *Str)
 		{
 			_putchar('\\');
 			_putchar('x');
-			len = len + 2;
+			len += 2;
 			_putchar ('0');
 			len += print_cap_hex(St);
 		}

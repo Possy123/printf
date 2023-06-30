@@ -52,6 +52,9 @@ int _printf(const char *format, ...)
 		case 'S':
 			count += print_special_string(va_arg(prints, char *));
 			break;
+		case 'p':
+			count += print_ptr(va_arg(prints, void *));
+			break;
 		default:
 			break;
 	}
